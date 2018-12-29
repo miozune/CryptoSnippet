@@ -84,7 +84,7 @@ def decrypt_from_d(d):
 #
 # 6. if e (typically 65537) is too small, Low Public Exponent Attack (m**e < n)
 #
-# print('flag:', bytes.fromhex(hex(gmpy2.root(c, e).__int__())[2:]).decode().strip())
+# print('flag:', bytes.fromhex(hex(gmpy2.iroot(c, e)[0])[2:]).decode().strip())
 #
 #
 # 7. if e (typically 65537) is too large, Wiener's Attack (q < p < 2*q, d < n**(1/4)/3)
